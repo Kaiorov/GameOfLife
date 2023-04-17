@@ -43,7 +43,6 @@ class GameOfLife(metaclass=SingletonMeta):
                 new_world[i][j] = 0
         self.old_world = copy.deepcopy(self.world)
         self.world = new_world
-        self.counter += 1
 
     def generate_universe(self):
         return [[random.randint(0, 1) for _ in range(self.__width)] for _ in range(self.__height)]
